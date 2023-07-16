@@ -1,0 +1,58 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #222;
+  
+  input {
+    height: 30px;
+    width: 250px;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    background: none;
+    color: white;
+    padding: 0 10px;
+    outline: none;
+  }
+  .enter {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    background: none;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+    margin-left: 10px;
+    &:hover {
+      background: whitesmoke;
+      color: #222;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  }
+}
+.todo-item {
+  position: absolute;
+  cursor: grab;
+  color: black;
+  min-width: 215px;
+  padding: 1em;
+  border-radius: 5px;
+  &:active {
+    cursor: grabbing;
+  }
+  .delete {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: none;
+    border: none;
+    &:hover {
+      color: red;
+      cursor: pointer;
+    }
+  }
+}
+
+
