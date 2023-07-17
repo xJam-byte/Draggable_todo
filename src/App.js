@@ -6,6 +6,10 @@ import Draggable from "react-draggable";
 
 function App() {
   const [item, setItem] = useState("");
+  const currentDimension = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  };
   const [items, setItems] = useState(
     JSON.parse(localStorage.getItem("items")) || []
   );
@@ -19,8 +23,8 @@ function App() {
           luminosity: "light",
         }),
         defaultPos: {
-          x: 500,
-          y: -500,
+          x: currentDimension.width / 3,
+          y: currentDimension.height / 500 - 550,
         },
       };
       setItems((items) => [...items, newItem]);
